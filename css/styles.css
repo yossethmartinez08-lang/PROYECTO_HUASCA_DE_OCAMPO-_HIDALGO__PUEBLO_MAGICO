@@ -1,1 +1,257 @@
+/* RESETEO BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    font-family: 'Poiret One', sans-serif;
+    font-size: 20px;
+    color: #333;
+}
+
+h1, h2, h3 {
+    font-family: 'Sail', cursive;
+    margin-bottom: 15px;
+}
+
+/* --- PALETA DE COLORES --- */
+:root {
+    --lavender-violet: #7758A3;
+    --ruddy-blue: #66A5ED;
+    --honey-gold: #F6C45C;
+    --lavender-rose: #FFA5EB;
+    --deep-cerise: #DB3E8C;
+    --blanco: #ffffff;
+    --negro-suave: #333333;
+}
+
+/* --- MENÚ DE NAVEGACIÓN --- */
+header {
+    width: 100%;
+    background-color: var(--lavender-violet);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h2 {
+    color: var(--blanco);
+    margin: 0;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: var(--blanco);
+    text-decoration: none;
+    font-family: 'Poiret One', sans-serif;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: var(--honey-gold);
+}
+
+/* --- SECCIONES GENERALES (ANCHO COMPLETO) --- */
+.seccion {
+    width: 100%;
+    padding: 60px 20px;
+}
+
+.titulo-seccion {
+    text-align: center;
+    font-size: 38px;
+    margin-bottom: 40px;
+}
+
+.contenedor-grid {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+/* --- SECCIÓN INICIO --- */
+#inicio {
+    background: linear-gradient(rgba(119, 88, 163, 0.7), rgba(102, 165, 237, 0.7)), url('../img/fondo_inicio.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--blanco);
+}
+
+#inicio h1 {
+    font-size: 60px;
+    color: var(--blanco);
+}
+
+#inicio p {
+    font-size: 24px;
+}
+
+/* --- SECCIÓN INFORMACIÓN --- */
+#info {
+    background-color: var(--blanco);
+}
+
+#info h3 { 
+    color: var(--lavender-violet); 
+}
+
+#info p { 
+    color: var(--negro-suave); 
+}
+
+.imagenes img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* --- SECCIÓN LUGARES --- */
+#lugares {
+    background: linear-gradient(rgba(246, 196, 92, 0.15), rgba(246, 196, 92, 0.15)), url('../img/fondo_lugares.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#lugares h2 { 
+    color: var(--deep-cerise); 
+}
+
+.contenedor-lugares {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.tarjeta {
+    background: var(--blanco);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-top: 5px solid var(--ruddy-blue);
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.tarjeta h3 {
+    color: var(--lavender-violet);
+}
+
+/* --- SECCIÓN GASTRONOMÍA --- */
+#gastronomia {
+    background-color: var(--lavender-rose);
+}
+
+#gastronomia h2, 
+#gastronomia h3 { 
+    color: var(--lavender-violet); 
+}
+
+#gastronomia p, 
+#gastronomia li { 
+    color: var(--negro-suave); 
+    font-weight: bold;
+}
+
+#gastronomia ul {
+    margin-top: 15px;
+    list-style: square;
+    padding-left: 20px;
+}
+
+/* --- SECCIÓN GALERÍA --- */
+#galeria {
+    background: linear-gradient(rgba(102, 165, 237, 0.8), rgba(102, 165, 237, 0.8)), url('../img/fondo_galeria.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#galeria .titulo-seccion {
+    color: var(--blanco);
+}
+
+.galeria-grid {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.galeria-grid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 3px solid var(--blanco);
+    transition: transform 0.3s;
+}
+
+.galeria-grid img:hover {
+    transform: scale(1.05);
+}
+
+/* --- SECCIÓN CONTACTO --- */
+#contacto {
+    background-color: var(--deep-cerise);
+    color: var(--blanco);
+    text-align: center;
+}
+
+#contacto h2 {
+    color: var(--honey-gold);
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: #5a407a;
+    color: var(--blanco);
+    text-align: center;
+    padding: 20px;
+    font-size: 16px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .contenedor-grid {
+        grid-template-columns: 1fr;
+    }
+    .nav-links {
+        gap: 10px;
+        font-size: 16px;
+    }
+}
