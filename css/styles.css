@@ -147,15 +147,52 @@ nav {
     line-height: 1.7;
     text-align: justify;
 }
+/* BLOQUES DE INFORMACIÓN */
 
-.imagenes img {
-    width: 85%;
-    border-radius: 15px;
-    margin: 15px auto;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-    display: block;
-    border: 5px solid var(--blanco);
+.info-bloque{
+    max-width:1100px;
+    margin:40px auto;
+    display:flex;
+    align-items:center;
+    gap:40px;
 }
+
+.info-bloque .texto{
+    flex:1;
+}
+
+.info-bloque .imagen{
+    flex:1;
+}
+
+.info-bloque img{
+    width:100%;
+    border-radius:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.3);
+    border:5px solid white;
+}
+
+/* BLOQUE INVERTIDO */
+
+.reversa{
+    flex-direction:row-reverse;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:768px){
+
+.info-bloque{
+flex-direction:column;
+text-align:center;
+}
+
+.reversa{
+flex-direction:column;
+}
+
+}
+
 
 /* --- SECCIÓN LUGARES --- */
 #lugares {
